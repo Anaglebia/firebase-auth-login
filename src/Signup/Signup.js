@@ -10,10 +10,10 @@ import {
 
  
 const Signup = () => {
-    const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
   const register = () => {
@@ -24,7 +24,7 @@ const Signup = () => {
   useEffect(() => {
     if (loading) return;
     if (user) navigate("/Home");
-  }, [user, loading]);
+  }, [user, loading, navigate]);
 
   return (
     <div className="register">
@@ -34,14 +34,14 @@ const Signup = () => {
           className="register__textBox"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Full Name"
+          placeholder="Nome"
         />
         <input
           type="text"
           className="register__textBox"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail Address"
+          placeholder="E-mail"
         />
         <input
           type="password"
