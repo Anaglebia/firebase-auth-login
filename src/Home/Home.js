@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -6,20 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {logout} from '../Firebase/firebase'
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
-import { auth } from '../Firebase/firebase'
+
+
 
 const Home = () => {
-  // const [logout, loading, error] = useAuthState(auth);
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   if (loading) return;
-  //   if (logout) navigate("/Login");
-  // }, [logout, loading]);
-  
-  
+ 
   return(
     <>
     <Navbar expand="lg" className="bg-body-tertiary">

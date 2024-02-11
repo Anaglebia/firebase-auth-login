@@ -4,21 +4,21 @@ import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Reset from '../Reset/Reset';
 // import Criar from '../Criar/Criar';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
-// import PrivateRoute from 'private-route-react'
+import { BrowserRouter, Routes,Route} from 'react-router-dom';
+
 
 
 const RoutesApp = () => {
+ 
   return (
     <BrowserRouter>
-            <Routes>                                       
-               <Route path="/Signup" element={<Signup/>}/>
-               <Route path="/" element={<Login/>}/>
+            <Routes>                                      
+              <Route path="/Signup" element={<Signup/>}/>
+              <Route path="/" element={<Login/>}/>
               <Route path="/Home" element={< Home />} />
-               <Route path="/Reset" element={<Reset/>}/>
+              <Route path="/Reset" element={<Reset/>}/>
                {/* <Route path="/Criar" element={<Criar/>}/> */}
-
-               {/* <PrivateRoute path="/Home"component={Home}  redirectPath={'../Login/Login.js'} /> */}
+               
             </Routes>
     </BrowserRouter>
   );
@@ -26,3 +26,4 @@ const RoutesApp = () => {
 
 export default RoutesApp;
  
+

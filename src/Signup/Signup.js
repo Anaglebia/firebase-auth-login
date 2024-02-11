@@ -61,7 +61,7 @@ const Signup = () => {
         </button>
 
         <div>
-          Já possui conta? <Link to="/Login">Login</Link> now.
+          Já possui conta? <Link to="/">Login</Link> now.
         </div>
       </div>
     </div>
